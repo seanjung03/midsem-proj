@@ -148,7 +148,6 @@ h1 {
 .top {
   display: flex;
   height: 15vh;
-  background-color: aliceblue;
   justify-content: center;
   align-items: center;
 }
@@ -156,5 +155,18 @@ h1 {
 .mid {
   display: flex;
   height: 85vh;
-  background-color: red;
+  flex-direction: row;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
 }
