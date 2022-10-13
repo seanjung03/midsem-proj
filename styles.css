@@ -190,3 +190,8 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+}
