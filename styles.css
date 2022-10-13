@@ -128,17 +128,33 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  font-size: min(1vh, 1vw);
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
 .main {
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
 }
 
 .top {
+  display: flex;
+  height: 15vh;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
 }
 
 .mid {
-}
-
-.bottom {
+  display: flex;
+  height: 85vh;
+  background-color: red;
 }
