@@ -22,6 +22,8 @@ const typeColor = {
   fairy: "#D685AD",
 };
 
+update();
+
 //arrow buttons
 let down = document.querySelector(".down");
 let up = document.querySelector(".up");
