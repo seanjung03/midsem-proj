@@ -26,6 +26,7 @@ const typeColor = {
 let info = [];
 let moves = [];
 let state = "info";
+let IMtext = document.querySelector(".right h5");
 
 update();
 
@@ -60,6 +61,7 @@ up.addEventListener("click", (e) => {
 infoB.addEventListener("click", (e) => {
   updateInfo();
   state = "info";
+  IMtext.textContent = "Info";
   e.target.style.backgroundColor = "lightgreen";
   movesB.style.backgroundColor = "#E8E8E8";
 });
@@ -67,6 +69,7 @@ infoB.addEventListener("click", (e) => {
 movesB.addEventListener("click", (e) => {
   updateMoves();
   state = "moves";
+  IMtext.textContent = "Moves";
   e.target.style.backgroundColor = "lightgreen";
   infoB.style.backgroundColor = "#E8E8E8";
 });
