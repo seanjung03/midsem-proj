@@ -22,6 +22,11 @@ const typeColor = {
   fairy: "#D685AD",
 };
 
+//Arrays for info and moves
+let info = [];
+let moves = [];
+let state = "info";
+
 update();
 
 //arrow buttons

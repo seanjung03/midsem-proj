@@ -177,6 +177,12 @@ h1 {
 .textBox {
   width: 60%;
   height: 50%;
+  background-color: lightgray;
+}
+
+h5 {
+  font-size: 3rem;
+  font-weight: 900;
 }
 
 h2 {
