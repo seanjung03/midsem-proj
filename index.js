@@ -33,6 +33,10 @@ update();
 let down = document.querySelector(".down");
 let up = document.querySelector(".up");
 
+//info moves buttons
+let infoB = document.querySelector(".info");
+let movesB = document.querySelector(".moves");
+
 //arrow button event listeners
 down.addEventListener("click", (e) => {
   index--;
@@ -50,6 +54,21 @@ up.addEventListener("click", (e) => {
   }
   update();
   console.log(index);
+});
+
+//info moves button event listeners
+infoB.addEventListener("click", (e) => {
+  updateInfo();
+  state = "info";
+  e.target.style.backgroundColor = "lightgreen";
+  movesB.style.backgroundColor = "lightgray";
+});
+
+movesB.addEventListener("click", (e) => {
+  updateMoves();
+  state = "moves";
+  e.target.style.backgroundColor = "lightgreen";
+  infoB.style.backgroundColor = "lightgray";
 });
 
 //general update function that occurs every time the index updates
@@ -99,56 +118,56 @@ function update() {
         updateMoves();
       }
     });
+}
 
-  //functions for updating text for info and moves
-  function updateInfo() {
-    let box = document.querySelector(".textBox");
-    while (box.firstChild) {
-      box.removeChild(box.firstChild);
-    }
-    let height = document.createElement("p");
-    height.textContent = "height: " + info[0] + "m";
-    box.appendChild(height);
+//functions for updating text for info and moves
+function updateInfo() {
+  let box = document.querySelector(".textBox");
+  while (box.firstChild) {
+    box.removeChild(box.firstChild);
+  }
+  let height = document.createElement("p");
+  height.textContent = "height: " + info[0] + "m";
+  box.appendChild(height);
 
-    let weight = document.createElement("p");
-    weight.textContent = "weight: " + info[1] + "kg";
-    box.appendChild(weight);
+  let weight = document.createElement("p");
+  weight.textContent = "weight: " + info[1] + "kg";
+  box.appendChild(weight);
 
-    let hp = document.createElement("p");
-    hp.textContent = "hp: " + info[2];
-    box.appendChild(hp);
+  let hp = document.createElement("p");
+  hp.textContent = "hp: " + info[2];
+  box.appendChild(hp);
 
-    let attack = document.createElement("p");
-    attack.textContent = "attack: " + info[3];
-    box.appendChild(attack);
+  let attack = document.createElement("p");
+  attack.textContent = "attack: " + info[3];
+  box.appendChild(attack);
 
-    let defense = document.createElement("p");
-    defense.textContent = "defense: " + info[4];
-    box.appendChild(defense);
+  let defense = document.createElement("p");
+  defense.textContent = "defense: " + info[4];
+  box.appendChild(defense);
 
-    let special_attack = document.createElement("p");
-    special_attack.textContent = "special-attack: " + info[5];
-    box.appendChild(special_attack);
+  let special_attack = document.createElement("p");
+  special_attack.textContent = "special-attack: " + info[5];
+  box.appendChild(special_attack);
 
-    let special_defense = document.createElement("p");
-    special_defense.textContent = "special-defense: " + info[6];
-    box.appendChild(special_defense);
+  let special_defense = document.createElement("p");
+  special_defense.textContent = "special-defense: " + info[6];
+  box.appendChild(special_defense);
 
-    let speed = document.createElement("p");
-    speed.textContent = "speed: " + info[7];
-    box.appendChild(speed);
+  let speed = document.createElement("p");
+  speed.textContent = "speed: " + info[7];
+  box.appendChild(speed);
+}
+
+function updateMoves() {
+  let box = document.querySelector(".textBox");
+  while (box.firstChild) {
+    box.removeChild(box.firstChild);
   }
 
-  function updateMoves() {
-    let box = document.querySelector(".textBox");
-    while (box.firstChild) {
-      box.removeChild(box.firstChild);
-    }
-
-    moves.forEach((mov) => {
-      let temp = document.createElement("p");
-      temp.textContent = mov;
-      box.appendChild(temp);
-    });
-  }
+  moves.forEach((mov) => {
+    let temp = document.createElement("p");
+    temp.textContent = mov;
+    box.appendChild(temp);
+  });
 }
