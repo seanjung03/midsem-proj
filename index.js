@@ -79,5 +79,23 @@ function update() {
         next.style.backgroundColor = typeColor[temp];
         specific.appendChild(next);
       });
+
+      info = [];
+      info.push(obj["height"] / 10);
+      info.push(obj["weight"] / 10);
+      obj["stats"].forEach((ind) => {
+        info.push(ind["base_stat"]);
+      });
+
+      moves = [];
+      obj["moves"].forEach((mov) => {
+        moves.push(mov["move"]["name"]);
+      });
+
+      if (state === "info") {
+      } else {
+      }
     });
+
+  //functions for updating text for info and moves
 }
