@@ -61,14 +61,14 @@ infoB.addEventListener("click", (e) => {
   updateInfo();
   state = "info";
   e.target.style.backgroundColor = "lightgreen";
-  movesB.style.backgroundColor = "lightgray";
+  movesB.style.backgroundColor = "#E8E8E8";
 });
 
 movesB.addEventListener("click", (e) => {
   updateMoves();
   state = "moves";
   e.target.style.backgroundColor = "lightgreen";
-  infoB.style.backgroundColor = "lightgray";
+  infoB.style.backgroundColor = "#E8E8E8";
 });
 
 //general update function that occurs every time the index updates

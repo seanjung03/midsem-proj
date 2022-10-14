@@ -180,10 +180,12 @@ h1 {
 
 .textBox {
   width: 60%;
-  height: 50%;
-  background-color: lightgray;
+  height: 45%;
+  background-color: #E8E8E8;
   padding: min(2vh, 2vw);
   overflow: auto;
+  border-radius: 1px;
+  margin-top: 1.5vh;
 }
 
 h5 {
@@ -235,7 +237,39 @@ h4 {
 .arrows {
   display: flex;
   flex-direction: row;
+  gap: 2vw;
   margin-top: 3vh;
+}
+
+.arrows button {
+  font-weight: 900;
+  font-size: 3rem;
+  width: 5.8vw;
+  height: 5.5vh;
+  border: none;
+  border-radius: 8px;
+  background-color: #E8E8E8;
+}
+
+.info_moves {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4vh;
+  gap: 2vw;
+}
+
+.info_moves button {
+  font-weight:0;
+  font-size: 2.8rem;
+  width: 5.8vw;
+  height: 5.5vh;
+  border: none;
+  border-radius: 8px;
+  background-color: #E8E8E8;
+}
+
+.info_moves .info {
+  background-color: lightgreen;
 }
 
 .specific {
