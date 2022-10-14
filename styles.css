@@ -142,6 +142,10 @@ table {
   flex-direction: column;
 }
 
+img {
+  border: 3px solid black;
+}
+
 h1 {
   font-size: 6rem;
   font-weight: 900;
@@ -178,6 +182,8 @@ h1 {
   width: 60%;
   height: 50%;
   background-color: lightgray;
+  padding: min(2vh, 2vw);
+  overflow: auto;
 }
 
 h5 {
@@ -185,37 +191,51 @@ h5 {
   font-weight: 900;
 }
 
+p {
+  font-size: 3rem;
+}
+
 h2 {
   font-size: 2.3rem;
-  background-color: rgb(237, 233, 233);
-  width: 15vw;
-  height: 3.5vh;
-  border: 2px solid black;
+  background-color: #E8E8E8;
+  width: 15.8vw;
+  height: 4vh;
+  border: 1px solid black;
   border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2vh;
 }
 
 .types {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-left: 30%;
+  padding-left: 40%;
 }
 
 h3 {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 3vh;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .arrows {
   display: flex;
   flex-direction: row;
+  margin-top: 3vh;
 }
 
 .specific {
