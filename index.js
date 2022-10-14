@@ -91,11 +91,64 @@ function update() {
       obj["moves"].forEach((mov) => {
         moves.push(mov["move"]["name"]);
       });
+      console.log(info);
 
       if (state === "info") {
+        updateInfo();
       } else {
+        updateMoves();
       }
     });
 
   //functions for updating text for info and moves
+  function updateInfo() {
+    let box = document.querySelector(".textBox");
+    while (box.firstChild) {
+      box.removeChild(box.firstChild);
+    }
+    let height = document.createElement("p");
+    height.textContent = "height: " + info[0] + "m";
+    box.appendChild(height);
+
+    let weight = document.createElement("p");
+    weight.textContent = "weight: " + info[1] + "kg";
+    box.appendChild(weight);
+
+    let hp = document.createElement("p");
+    hp.textContent = "hp: " + info[2];
+    box.appendChild(hp);
+
+    let attack = document.createElement("p");
+    attack.textContent = "attack: " + info[3];
+    box.appendChild(attack);
+
+    let defense = document.createElement("p");
+    defense.textContent = "defense: " + info[4];
+    box.appendChild(defense);
+
+    let special_attack = document.createElement("p");
+    special_attack.textContent = "special-attack: " + info[5];
+    box.appendChild(special_attack);
+
+    let special_defense = document.createElement("p");
+    special_defense.textContent = "special-defense: " + info[6];
+    box.appendChild(special_defense);
+
+    let speed = document.createElement("p");
+    speed.textContent = "speed: " + info[7];
+    box.appendChild(speed);
+  }
+
+  function updateMoves() {
+    let box = document.querySelector(".textBox");
+    while (box.firstChild) {
+      box.removeChild(box.firstChild);
+    }
+
+    moves.forEach((mov) => {
+      let temp = document.createElement("p");
+      temp.textContent = mov;
+      box.appendChild(temp);
+    });
+  }
 }
